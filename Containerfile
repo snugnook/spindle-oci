@@ -1,5 +1,5 @@
 # Derive from Nix image
-FROM nixos/nix
+FROM docker.io/nixos/nix
 
 # Enable flakes
 RUN echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
