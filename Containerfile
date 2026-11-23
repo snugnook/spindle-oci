@@ -5,7 +5,7 @@ FROM docker.io/nixos/nix
 RUN echo "experimental-features = nix-command flakes" >> /etc/nix/nix.conf
 
 # Install Spindle
-RUN nix profile install "git+https://tangled.org/tangled.org/core#spindle"
+RUN nix profile install "git+https://tangled.org/tangled.org/core#spindle" && nix-collect-garbage -d
 
 # Expose default port
 EXPOSE 6555
