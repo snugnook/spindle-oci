@@ -12,8 +12,7 @@ RUN nix profile add "git+https://tangled.org/tangled.org/core#spindle" \
     nixpkgs#slirp4netns \
     nixpkgs#iproute2 \
     nixpkgs#util-linux \
-    nixpkgs#kmod
- && nix-collect-garbage -d
+    nixpkgs#kmod && nix-collect-garbage -d
 
 # Expose default port
 EXPOSE 6555
