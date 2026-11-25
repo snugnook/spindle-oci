@@ -6,7 +6,6 @@ ENV NIX_CONFIG="experimental-features = nix-command flakes"
 
 # Install Spindle and helper tools for MicroVMs
 RUN nix profile add "git+https://tangled.org/tangled.org/core#spindle" \
-    nixpkgs#git \
     nixpkgs#qemu_kvm \
     nixpkgs#e2fsprogs \
     nixpkgs#slirp4netns \
